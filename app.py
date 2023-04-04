@@ -1,15 +1,23 @@
-import cv2
+## Before you run the code create a new folder and upload the images
+
+## imported the necessary lib
+import cv2 
 import numpy as np
 import face_recognition
 import os
 import time
 from send import sendpicture
-path = 'images'
+
+
+
+cap = cv2.VideoCapture(0) # change the value based upon your camara
+path = 'images'  # path to the input images 
 images = []
 classNames = []
 flag = 0
 
-cap = cv2.VideoCapture(0)
+
+##### Extracting the encodings #####
 
 myList = os.listdir(path)
 for cl in myList:
@@ -35,6 +43,9 @@ print('Encoding Completed')
 if not os.path.exists('detectedimgaes'):
     os.mkdir('detectedimgaes')
 
+    
+    
+### Face recognation part
 def fcr(img):
     time_stamp = str(time.time())
     success, img = cap.read()
