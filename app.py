@@ -7,6 +7,8 @@ path = 'images'
 images = []
 classNames = []
 
+#harsha
+
 
 myList = os.listdir(path)
 for cl in myList:
