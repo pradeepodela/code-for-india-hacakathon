@@ -88,7 +88,7 @@ if __name__ == '__main__':
     while True:
         time_stamp = str(time.time())
         success, img = cap.read()
-        fcr(img)
+        img = fcr(img)
         cv2.imshow('Webcam', img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
