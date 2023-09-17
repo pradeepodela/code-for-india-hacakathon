@@ -55,6 +55,7 @@ def fcr(img):
     imgS = cv2.cvtColor(imgS, cv2.COLOR_BGR2RGB)
 
     facesCurFrame = face_recognition.face_locations(imgS)
+    print(len(facesCurFrame))
     encodesCurFrame = face_recognition.face_encodings(imgS, facesCurFrame)
 
     for encodeFace, faceLoc in zip(encodesCurFrame, facesCurFrame):
