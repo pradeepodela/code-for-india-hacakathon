@@ -82,6 +82,7 @@ def fcr(img):
                 data = f'Accused Found!!\n\n-------------------------------\nName: {name}\nFound at: code for india foundation \nLocation: https://www.google.com/maps/@17.3703168,78.4072704,13z \n-------------------------------'
                 sendpicture(data,f'detectedimgaes/{time_stamp}_{name}.png')
                 flag = 0
+            return img
 
 if __name__ == '__main__':
     while True:
